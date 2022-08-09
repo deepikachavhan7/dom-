@@ -27,10 +27,10 @@
 // for(var i= 0 ;i<items.length;i++){
 // items[i].style.fontWeight="bold";
 // items[i].style.color="green";
-// }
+// // }
 
-var items =document.getElementsByClassName("list-group-item");
-items[3].style.backgroundColor="green";
+// var items =document.getElementsByClassName("list-group-item");
+// items[3].style.backgroundColor="green";
 
 //query selector
 
@@ -47,10 +47,11 @@ items[3].style.backgroundColor="green";
 // var lastelement = document.querySelector('.list-group-item:last-child');
 // lastelement.style.color ='blue';
 
-// var lastelement = document.querySelector('.list-group-item:nth-child(2)');
-// lastelement.style.color ='yellow';
-
-
+var secondelement = document.querySelector('.list-group-item:nth-child(2)');
+secondelement.style.backgroundColor ='green';
+var thirdelement = document.querySelector('.list-group-item:nth-child(3)');
+thirdelement.style.display ='none';
+s
 
 // var lastelement = document.querySelectorAll('.list-group-item');
 // for(var i =0; i<lastelement.length;i++){
@@ -61,17 +62,28 @@ items[3].style.backgroundColor="green";
 // console.log(titles);
 // titles[0].textContent ="good job";
 
-// var odd =document.querySelectorAll('li:nth-child(odd)');
+var seconditem = document.querySelectorAll('.list-group-item');
+seconditem[2].style.color="green";
+
+
 // var even =document.querySelectorAll('li:nth-child(even)');
 // for(var i=0 ; i<odd.length;i++){
-//     odd[i].style.backgroundColor ="pink";
-//     even[i].style.backgroundColor ="orange";
+
+// even[i].style.backgroundColor ="orange";
 // }
+var odd =document.querySelectorAll('li:nth-child(odd)');
+for(var i=0 ; i<odd.length;i++){
+    odd[i].style.backgroundColor ="orange";
+    
+}
 
 //getelementbytagname
 
-var lii =document.getElementsByTagName('li');
-console.log(lii);
-console.log(lii[1]);
-lii[1].style.backgroundColor="orange";
+// var lii =document.getElementsByTagName('li');
+// console.log(lii);
+// console.log(lii[1]);
+// lii[1].style.backgroundColor="orange";
+// for (var i=0;i<lii.length;i++){
+//     lii[i].style.backgroundColor="yellow";  
+// }
 
