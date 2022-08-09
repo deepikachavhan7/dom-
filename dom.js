@@ -47,11 +47,11 @@
 // var lastelement = document.querySelector('.list-group-item:last-child');
 // lastelement.style.color ='blue';
 
-var secondelement = document.querySelector('.list-group-item:nth-child(2)');
-secondelement.style.backgroundColor ='green';
-var thirdelement = document.querySelector('.list-group-item:nth-child(3)');
-thirdelement.style.display ='none';
-s
+// var secondelement = document.querySelector('.list-group-item:nth-child(2)');
+// secondelement.style.backgroundColor ='green';
+// var thirdelement = document.querySelector('.list-group-item:nth-child(3)');
+// thirdelement.style.display ='none';
+// s
 
 // var lastelement = document.querySelectorAll('.list-group-item');
 // for(var i =0; i<lastelement.length;i++){
@@ -62,8 +62,8 @@ s
 // console.log(titles);
 // titles[0].textContent ="good job";
 
-var seconditem = document.querySelectorAll('.list-group-item');
-seconditem[2].style.color="green";
+// var seconditem = document.querySelectorAll('.list-group-item');
+// seconditem[2].style.color="green";
 
 
 // var even =document.querySelectorAll('li:nth-child(even)');
@@ -71,11 +71,11 @@ seconditem[2].style.color="green";
 
 // even[i].style.backgroundColor ="orange";
 // }
-var odd =document.querySelectorAll('li:nth-child(odd)');
-for(var i=0 ; i<odd.length;i++){
-    odd[i].style.backgroundColor ="orange";
+// var odd =document.querySelectorAll('li:nth-child(odd)');
+// for(var i=0 ; i<odd.length;i++){
+//     odd[i].style.backgroundColor ="orange";
     
-}
+// }
 
 //getelementbytagname
 
@@ -86,4 +86,83 @@ for(var i=0 ; i<odd.length;i++){
 // for (var i=0;i<lii.length;i++){
 //     lii[i].style.backgroundColor="yellow";  
 // }
+
+
+
+///treversing the dom
+//parent node
+var listitem =document.querySelector('#items');
+// console.log(listitem.parentNode);
+// listitem.parentNode.style.backgroundColor="green";
+// console.log(listitem.parentNode.parentNode);
+
+// //parent element 
+// var listitem =document.querySelector('#items');
+// console.log(listitem.parentElement);
+// listitem.parentElement.style.backgroundColor="orange";
+// console.log(listitem.parentElement.parentElement);
+
+//childnode
+
+console.log(listitem.childNodes);
+//children
+console.log(listitem.children);
+console.log(listitem.children[1]);
+listitem.children[1].style.backgroundColor="blue";
+
+//firstchild
+console.log(listitem.firstChild);
+
+//firstelementchild
+console.log(listitem.firstElementChild);
+console.log(listitem.firstElementChild.innerHTML);
+//lastnode
+console.log(listitem.lastChild);
+
+//lastelementchild
+console.log(listitem.lastElementChild);
+
+//nextsibling
+console.log(listitem.nextSibling);
+console.log(listitem.nextElementSibling);
+
+//previoussibling
+console.log(listitem.previousSibling);
+
+//previouselementsibling
+console.log(listitem.previousElementSibling);
+listitem.previousElementSibling.style.color ="blue";
+
+// create element
+// create div
+var nwdiv=document.createElement('div');
+console.log(nwdiv);
+//add class
+
+ nwdiv.className="demo";
+ console.log(nwdiv);
+
+ //add id
+ nwdiv.id="helooo";
+
+ //create attribute
+ nwdiv.setAttribute('tilte','good');
+
+ //add textNode
+ var newdivtext=document.createTextNode("HEllo");
+nwdiv.appendChild(newdivtext);
+
+ console.log(nwdiv);
+//add HEllo word before Item Lister
+ var contain= document.querySelector('header .container');
+ var h1 =document.querySelector('header h1');
+ contain.insertBefore(nwdiv,h1)
+//  add HEllo word before Item 1
+ var contain1= document.querySelector('body .list-group'); 
+ var li =document.querySelector('body li');
+ contain1.insertBefore(nwdiv,li)
+
+
+
+
 
