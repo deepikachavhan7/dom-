@@ -67,3 +67,11 @@ items[3].style.backgroundColor="green";
 //     odd[i].style.backgroundColor ="pink";
 //     even[i].style.backgroundColor ="orange";
 // }
+
+//getelementbytagname
+
+var lii =document.getElementsByTagName('li');
+console.log(lii);
+console.log(lii[1]);
+lii[1].style.backgroundColor="orange";
+
