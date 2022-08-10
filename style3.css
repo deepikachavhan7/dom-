@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.formheading{
+    text-align: center;
+}
+#container{
+    border: 2px solid black;
+    width:350px;
+    height: 400px;
+    margin-left: 600px;
+    
+}
+#textlabel{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inputtype{
+    width:80%;
+    /* +padding-right: 10px; */
+    margin-top: 20px;
+}
+.btn{
+    margin-left: 100px;
+    width: 50%;
+}
+.list{
+    list-style-type: none;
+    margin-left: 41%;
+}
+.listitem{
+    background-color: gray;
+    margin-top: 10px;
+    text-align: center;
+    width: 350px;
+}
+.error{
+    background-color: rebeccapurple;
+    color: azure;
+    width: 150px;
+    margin-left: 70px;
+    
+}
+
+
+    
