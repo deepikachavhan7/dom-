@@ -16,18 +16,20 @@ function onclickdata(e){
     const username =e.target.uname.value;
     const usermail=e.target.uemail.value;
     const userpass=e.target.upassword.value;
-    localStorage.setItem('name',username);
-    localStorage.setItem('email',usermail);
-    localStorage.setItem('password',userpass);
-    let myobj1={
+    // localStorage.setItem('name',username);
+    // localStorage.setItem('email',usermail);
+    // localStorage.setItem('password',userpass);
+    const newuser={
         username,
         usermail,
         userpass
     }
-    console.log(localStorage.setItem("userdetails",JSON.stringify(myobj1)));
-    var data_deserialized=JSON.parse(localStorage.getItem("myobj1"));
-       console.log(data_deserialized);
 
+    for(var i=0; i<newuser.usermail.length;i++){
+    console.log(localStorage.setItem(newuser.usermail,JSON.stringify(newuser)));
+    // var data_deserialized=JSON.parse(localStorage.getItem('newuser'));
+    //    console.log(data_deserialized);
+    }
     
 }
 
