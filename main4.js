@@ -39,19 +39,35 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 // function to show data on screen
 function showUserOnScreen(user){
-     
+     // function edituser
+    document.getElementById('mail').value = '';
+    document.getElementById('Uname').value = '';
+    document.getElementById('pwd').value ='';
+    // console.log(localStorage.getItem(user.emailId))
+    if(localStorage.getItem(user.mail) !== null){
+        removeUserFromScreen(user.mail)
+    }
 
 
 
     const parentnode =document.getElementById("users");
     const childhtml= `<li>${user.username} :${user.usermail}:${user.userpass}
     <button onClick= deleteUser('${user.usermail}')> Delete User </button>
-   
+    <button onClick = editUserDetails('${user.usermail},${user.username},${user.userpass}')> Edit user </button>
     </li>`;
     parentnode.innerHTML=parentnode.innerHTML + childhtml;
 }
 
+//Edit User
 
+function editUserDetails(uemail, uname, upass){
+
+    document.getElementById('mail').value = uemail;
+    document.getElementById('Uname').value = uname;
+    document.getElementById('pwd').value =upass;
+
+    deleteUser(uemail)
+ }
 
 
 // delelte user
@@ -65,7 +81,7 @@ function deleteUser(uemail){
 function removeUserFromScreen(uemail){
     const parentNode = document.getElementById('users');
     const childnodetodeleted =document.getElementById(uemail);
-    
+    if (childnodetodeleted){
     parentNode.removeChild(childnodetodeleted)
-
+}
 }
