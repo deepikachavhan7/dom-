@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <style>
+        form{
+            height: 400px;
+            width: 500px;
+            margin-left: 250px;
+            margin-top: 100px;
+        }
+        .btn{
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+  
+    <div >
+<form id="container">
+<label>choose  expense amount:</label>
+<input type="number" class="form-control "  name ="amt" id="amount">
+<label>choose description:</label>
+<input type="text" class="form-control " name ="des"id="description">
+<label>choose category:</label>
+<select class="form-control " name="ctgry" id="category">
+    <option>fuel</option>
+    <option>petrol</option>
+    <option>deisel</option>
+    <option>gas</option>
+</select>
+<input type ="submit" class="btn btn-dark " value="add expense">
+
+
+</form>
+
+<ul id="choose"></ul>
+    </div>
+  <script src="index.js"></script>
+
+</body>
+</html>
