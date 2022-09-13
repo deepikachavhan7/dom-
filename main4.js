@@ -18,7 +18,7 @@ function onsubmitdata(event){
         usermail,
         userpass
     }
-    localStorage.setItem(newuser2.usermail,JSON.stringify( newuser2));
+    localStorage.setItem(newuser2.usermail,JSON.stringify(newuser2));
     showUserOnScreen(newuser2)
 }
 /// iterate over object key 
