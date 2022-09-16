@@ -18,8 +18,17 @@ function onsubmitdata(event){
         usermail,
         userpass
     }
-    localStorage.setItem(newuser2.usermail,JSON.stringify(newuser2));
-    showUserOnScreen(newuser2)
+    axios.post('https://crudcrud.com/api/2da4e3d0e8f8442697f6c11decb752fe/appointmentdata',newuser2)
+    .then((response)=>{
+        showUserOnScreen(response.data)
+        console.log(response);
+    })
+    .catch((err)=>{
+        document.body.innerHTML=document.body.innerHTML+"<h3>something went wrong</h3>"
+        console.log(err);
+    })
+    // localStorage.setItem(newuser2.usermail,JSON.stringify(newuser2));
+    // showUserOnScreen(newuser2)
 }
 /// iterate over object key 
 window.addEventListener("DOMContentLoaded",()=>{
@@ -56,7 +65,7 @@ function showUserOnScreen(user){
     <button onClick = editUserDetails('${user.usermail},${user.username},${user.userpass}')> Edit user </button>
     </li>`;
     parentnode.innerHTML=parentnode.innerHTML + childhtml;
-}
+} 
 
 //Edit User
 
