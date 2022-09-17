@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     axios.get("https://crudcrud.com/api/89dbfce3eae84fd28ce5fdad6508a203/appiontment_book")
     .then((response)=>{
         console.log(response);
-        for(var i=0;i<=response.data.length;i++){
+        for(var i=0;i<response.data.length;i++){
             showUserOnScreen(response.data[i]);
         }
     }).catch((error)=>{
@@ -93,7 +93,8 @@ function editUserDetails(uemail, uname, upass){
 
 function deleteUser(uemail){
     console.log(uemail)
-    localStorage.removeItem(uemail)
+    axios.delete('https://crudcrud.com/api/89dbfce3eae84fd28ce5fdad6508a203/appiontment_book/63252d8506e25f03e8c4f8e9')
+    //localStorage.removeItem(uemail)
     removeUserFromScreen(uemail)
 }
 
